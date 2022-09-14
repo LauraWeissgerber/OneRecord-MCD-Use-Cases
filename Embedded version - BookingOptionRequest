@@ -19,11 +19,21 @@
   "iata:bookingOptionRequest:parties": {
     "@type": "iata:Party",
     "iata:party:otherIdentifiers": {
-      "@id": "iata:OtherIdentifier/thisObjectId",
-      "@type": "iata:OtherIdentifier"
+      "@type": "iata:OtherIdentifier",
+      "iata:otherIdentifier": "string",
+      "iata:otherIdentifier:otherIdentifierType": "string"
     },
     "iata:party:partyDetails": {
-      "@id": "iata:Company/thisObjectId",
+      "iata:party:otherIdentifiers": {
+        "iata:otherIdentifier": "string",
+        "iata:otherIdentifier:otherIdentifierType": "string",
+        "@type": "iata:OtherIdentifier"
+      },
+      "iata:party:partyDetails": {
+        "@id": "iata:Company/thisObjectId",
+        "@type": "iata:Company"
+      },
+      "iata:party:partyRole": "string",
       "@type": "iata:Company"
     },
     "iata:party:partyRole": "string"
@@ -50,7 +60,7 @@
   "iata:bookingOptionRequest:timePreferences": {
     "@type": "iata:BookingTimes",
     "iata:bookingtimes:latestAcceptanceTime": "2022-08-09T12:05:00",
-    "iata:bookingtimes:timeOfAvailability": "2022-08-15T14:00:00"
+    "iata:bookingtimes:timeOfAvailability": "2022-08-15T14:00:00\r\n"
   },
   "iata:bookingOptionRequest:transportMovement": {
     "@type": "iata:TransportSegment",
