@@ -50,7 +50,7 @@
   "iata:bookingOptionRequest:timePreferences": {
     "@type": "iata:BookingTimes",
     "iata:bookingtimes:latestAcceptanceTime": "2022-08-09T12:05:00",
-    "iata:bookingtimes:timeOfAvailability": "2022-08-15T14:00:00\r\n"
+    "iata:bookingtimes:timeOfAvailability": "2022-08-15T14:00:00"
   },
   "iata:bookingOptionRequest:transportMovement": {
     "@type": "iata:TransportSegment",
