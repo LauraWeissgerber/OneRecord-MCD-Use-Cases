@@ -20,8 +20,8 @@
     "@type": "iata:Party",
     "iata:party:otherIdentifiers": {
       "@type": "iata:OtherIdentifier",
-      "iata:otherIdentifier": "string",
-      "iata:otherIdentifier:otherIdentifierType": "string"
+      "iata:otherIdentifier": "332242903",
+      "iata:otherIdentifier:otherIdentifierType": "customerId"
     },
     "iata:party:partyDetails": {
       "iata:party:otherIdentifiers": {
