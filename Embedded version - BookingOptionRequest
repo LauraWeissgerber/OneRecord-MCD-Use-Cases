@@ -1,4 +1,4 @@
-v{
+{
   "@context": {
     "iata": "https://onerecord.iata.org/"
   },
@@ -38,7 +38,13 @@ v{
   },
   "iata:bookingOptionRequest:routingPreferences": {
     "@id": "iata:Routing/thisObjectId",
-    "@type": "iata:Routing"
+    "@type": "iata:Routing",
+    "iata:routing:scheduledLegs:": {
+      "@id": "iata:ScheduledLegs/thisObjectId",
+      "@type": "iata:ScheduledLegs"
+    },
+    "iata:routing:latestArrivalDateTime": "dateTime",
+    "iata:routing:maxConnections": 0
   },
   "iata:bookingOptionRequest:schedulePreferences": {
     "@id": "iata:Schedule/thisObjectId",
