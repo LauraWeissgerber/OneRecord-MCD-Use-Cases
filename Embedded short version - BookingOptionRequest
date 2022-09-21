@@ -68,16 +68,24 @@
     "iata:piece#dimensions" : {
     "@type": "iata:Dimensions",
             "iata:dimensions:height" : {
-            "@type": "iata:Value"
+            "@type": "iata:Value",
+            "iata:value:unit" : "cm",
+            "iata:value:value" : "300"
             },
             "iata:dimensions:length" : {
-            "@type": "iata:Value"
+            "@type": "iata:Value",
+            "iata:value:unit" : "cm",
+            "iata:value:value" : "200"
             },
             "iata:dimensions:volume" : {
-            "@type": "iata:Value"
+            "@type": "iata:Value",
+            "iata:value:unit" : "string",
+            "iata:value:value" : "double"
             },
             "iata:dimensions:width" : {
-            "@type": "iata:Value"
+            "@type": "iata:Value",
+            "iata:value:unit" : "cm",
+            "iata:value:value" : "350"
 }},
       "iata:piece#stackable" : "true",
       "iata:piece#turnable" : "false"
