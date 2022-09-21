@@ -4,6 +4,7 @@
   },
   "@type": "iata:BookingOptionRequest",
   "iata:bookingOptionRequest#bookingSegment": {
+    "@id": "bookingOptionRequest#bookingSegment",
     "@type": "iata:BookingSegment",
     "iata:bookingSegment#arrivalLocation": {
       "@type": "iata:Location",
@@ -15,6 +16,7 @@
     }
   },
   "iata:bookingOptionRequest#parties": {
+    "@id": "bookingOptionRequest#parties",
     "@type": "iata:Party",
     "iata:party#customer": {
       "@type": "iata:OtherIdentifier",
@@ -28,6 +30,7 @@
     }
   },
   "iata:bookingOptionRequest#ratingsPreference": {
+    "@id": "bookingOptionRequest#ratingsPreference",
     "@type": "iata:Ratings",
     "iata:ratings#ranges": {
       "@type": "iata:Ranges",
@@ -35,6 +38,7 @@
     }
   },
   "iata:bookingOptionRequest#routingPreferences": {
+    "@id": "bookingOptionRequest#routingPreferences",
     "@type": "iata:Routing",
     "iata:routing#scheduledLegs:": {
         "@type": "iata:ScheduledLegs",
@@ -51,11 +55,13 @@
     "iata:routing:maxConnections": 0
   },
   "iata:bookingOptionRequest#schedulePreferences": {
+    "@id": "bookingOptionRequest#schedulePreferences",
     "@type": "iata:Schedule",
     "iata:schedule#latestAcceptanceTime" : "2022-08-09T12:05:00",
-    "iata:schedule#timeOfAvailability" : "2022-08-15T14:00:00",
+    "iata:schedule#timeOfAvailability" : "2022-08-15T14:00:00"
   },
   "iata:bookingOptionRequest#shipmentDetails": {
+    "@id": "bookingOptionRequest#shipmentDetails",
     "@type": "iata:Shipment",
     "iata:shipment#containedPieces" : {
    "@id": "iata:Piece/thisObjectId",
@@ -72,18 +78,20 @@
     }
   },
   "iata:bookingOptionRequest#timePreferences": {
+    "@id": "bookingOptionRequest#timePreferences",
     "@type": "iata:BookingTimes",
     "iata:bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
     "iata:bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
   }
   "iata:bookingOptionRequest#transportMovement": {
+    "@id": "bookingOptionRequest#transportMovement",
     "@type": "iata:TransportSegment",
     "iata:transportMovement#arrivalLocation": {
-      "iata:location#code": "JFK"
+      "iata:location#code": "JFK",
       "@type": "iata:Location"
     },
     "iata:transportMovement#departureLocation": {
-      "iata:location#code": "FRA"
+      "iata:location#code": "FRA",
       "@type": "iata:Location"
     },
     "iata:transportMovement#movementTimes": {
