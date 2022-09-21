@@ -1,114 +1,113 @@
 {
-  "@context": {
-    "iata": "https://onerecord.iata.org/"
-  },
-  "@type": "iata:BookingOptionRequest",
-  "iata:bookingOptionRequest#bookingSegment": {
+    "@context": {
+      "iata": "https://onerecord.iata.org/"
+    },
+    "@type": "iata:BookingOptionRequest",
+    "iata:bookingOptionRequest#bookingSegment": {
     "@id": "bookingOptionRequest#bookingSegment",
-    "@type": "iata:BookingSegment",
-    "iata:bookingSegment#arrivalLocation": {
-      "@type": "iata:Location",
-      "iata:location#code": "JFK"
-    },
-    "iata:bookingSegment#departureLocation": {
-      "@type": "iata:Location",
-      "iata:location#code": "FRA"
-    }
+      "@type": "iata:BookingSegment",
+      "iata:bookingSegment#arrivalLocation": {
+        "@type": "iata:Location",
+        "iata:location#code": "JFK"
+      },
+      "iata:bookingSegment#departureLocation": {
+        "@type": "iata:Location",
+        "iata:location#code": "FRA"
+      }
   },
-  "iata:bookingOptionRequest#parties": {
-    "@id": "bookingOptionRequest#parties",
-    "@type": "iata:Party",
-    "iata:party#customer": {
-      "@type": "iata:OtherIdentifier",
-      "iata:otherIdentifier": 332242903,
-      "iata:otherIdentifier#otherIdentifierType": "customerId"
+    "iata:bookingOptionRequest#parties": {
+      "@id": "bookingOptionRequest#parties",
+      "@type": "iata:Party",
+      "iata:party#customer": {
+        "@type": "iata:OtherIdentifier",
+        "iata:otherIdentifier": 332242903,
+        "iata:otherIdentifier#otherIdentifierType": "customerId"
+      },
+      "iata:party:consignee": {
+        "@type": "iata:OtherIdentifier",
+        "iata:otherIdentifier": 123456789,
+        "iata:otherIdentifier#otherIdentifierType": "consigneeId"
+      }
     },
-    "iata:party:consignee": {
-      "@type": "iata:OtherIdentifier",
-      "iata:otherIdentifier": 123456789,
-      "iata:otherIdentifier#otherIdentifierType": "consigneeId"
-    }
-  },
-  "iata:bookingOptionRequest#ratingsPreference": {
-    "@id": "bookingOptionRequest#ratingsPreference",
-    "@type": "iata:Ratings",
-    "iata:ratings#ranges": {
-      "@type": "iata:Ranges",
-      "iata:ranges#unitBasis": "EUR"
-    }
-  },
-  "iata:bookingOptionRequest#routingPreferences": {
-    "@id": "bookingOptionRequest#routingPreferences",
-    "@type": "iata:Routing",
-    "iata:routing#scheduledLegs:": {
-        "@type": "iata:ScheduledLegs",
-        "iata:scheduledLegs#arrivalLocation" : {
-            "@type": "iata:Location",
-            "iata:location#code": "JFK"
-        },
-        "iata:scheduledLegs#departureLocation" : {
-            "@type": "iata:Location",
-            "iata:location#code": "FRA"
-        },
+    "iata:bookingOptionRequest#ratingsPreference": {
+      "@id": "bookingOptionRequest#ratingsPreference",
+      "@type": "iata:Ratings",
+      "iata:ratings#ranges": {
+        "@type": "iata:Ranges",
+        "iata:ranges#unitBasis": "EUR"
+      }
     },
-    "iata:routing#latestArrivalDateTime": "2022-08-15T14:00:00",
-    "iata:routing:maxConnections": 0
+    "iata:bookingOptionRequest#routingPreferences": {
+      "@id": "bookingOptionRequest#routingPreferences",
+      "@type": "iata:Routing",
+      "iata:routing#scheduledLegs:": {
+          "@type": "iata:ScheduledLegs",
+          "iata:scheduledLegs#arrivalLocation" : {
+              "@type": "iata:Location",
+              "iata:location#code": "JFK"
+          },
+          "iata:scheduledLegs#departureLocation" : {
+              "@type": "iata:Location",
+              "iata:location#code": "FRA"
+          }
+      },
+      "iata:routing#latestArrivalDateTime": "2022-08-15T14:00:00",
+      "iata:routing:maxConnections": 0
   },
-  "iata:bookingOptionRequest#schedulePreferences": {
-    "@id": "bookingOptionRequest#schedulePreferences",
-    "@type": "iata:Schedule",
-    "iata:schedule#latestAcceptanceTime" : "2022-08-09T12:05:00",
-    "iata:schedule#timeOfAvailability" : "2022-08-15T14:00:00"
+    "iata:bookingOptionRequest#schedulePreferences": {
+      "@id": "bookingOptionRequest#schedulePreferences",
+      "@type": "iata:Schedule",
+      "iata:schedule#latestAcceptanceTime" : "2022-08-09T12:05:00",
+      "iata:schedule#timeOfAvailability" : "2022-08-15T14:00:00"
+    },
+    "iata:bookingOptionRequest#shipmentDetails": {
+      "@id": "bookingOptionRequest#shipmentDetails",
+      "@type": "iata:Shipment",
+      "iata:shipment#containedPieces" : {
+     "@id": "iata:Piece/thisObjectId",
+     "@type": "iata:Piece"
+      },
+      "iata:shipment#dimensions" : {
+     "@id": "iata:Dimensions/thisObjectId",
+     "@type": "iata:Dimensions"
+      },
+      "iata:shipment#totalGrossWeight" : {
+     "@id": "iata:Value/thisObjectId",
+     "@type": "iata:Value"
+      }
   },
-  "iata:bookingOptionRequest#shipmentDetails": {
-    "@id": "bookingOptionRequest#shipmentDetails",
-    "@type": "iata:Shipment",
-    "iata:shipment#containedPieces" : {
-   "@id": "iata:Piece/thisObjectId",
-   "@type": "iata:Piece"
+    "iata:bookingOptionRequest#timePreferences": {
+      "@id": "bookingOptionRequest#timePreferences",
+      "@type": "iata:BookingTimes",
+      "iata:bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
+      "iata:bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
     },
-    "iata:shipment#dimensions" : {
-   "@id": "iata:Dimensions/thisObjectId",
-   "@type": "iata:Dimensions"
-    },
-    "iata:shipment#totalGrossWeight" : {
-   "@id": "iata:Value/thisObjectId",
-   "@type": "iata:Value"
-    },
-    }
+    "iata:bookingOptionRequest#transportMovement": {
+      "@id": "bookingOptionRequest#transportMovement",
+      "@type": "iata:TransportSegment",
+      "iata:transportMovement#arrivalLocation": {
+        "iata:location#code": "JFK",
+        "@type": "iata:Location"
+      },
+      "iata:transportMovement#departureLocation": {
+        "iata:location#code": "FRA",
+        "@type": "iata:Location"
+      },
+      "iata:transportMovement#movementTimes": {
+        "@id": "iata:MovementTimes/thisObjectId",
+        "@type": "iata:MovementTimes"
+      },
+      "iata:transportMovement#transportedPieces": {
+        "@id": "iata:Piece/thisObjectId",
+        "@type": "iata:Piece"
+      },
+      "iata:transportMovement#transportedUlds": {
+        "@id": "iata:ULD/thisObjectId",
+        "@type": "iata:ULD"
+      }
   },
-  "iata:bookingOptionRequest#timePreferences": {
-    "@id": "bookingOptionRequest#timePreferences",
-    "@type": "iata:BookingTimes",
-    "iata:bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
-    "iata:bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
+    "iata:bookingOptionRequest#allotment": "A-123456789",
+    "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
+    "iata:bookingOptionRequest#requestType": "BookingOptioNRequest",
+    "iata:bookingOptionRequest#requestedHandling": "EAW, SEC"
   }
-  "iata:bookingOptionRequest#transportMovement": {
-    "@id": "bookingOptionRequest#transportMovement",
-    "@type": "iata:TransportSegment",
-    "iata:transportMovement#arrivalLocation": {
-      "iata:location#code": "JFK",
-      "@type": "iata:Location"
-    },
-    "iata:transportMovement#departureLocation": {
-      "iata:location#code": "FRA",
-      "@type": "iata:Location"
-    },
-    "iata:transportMovement#movementTimes": {
-      "@id": "iata:MovementTimes/thisObjectId",
-      "@type": "iata:MovementTimes"
-    },
-    "iata:transportMovement#transportedPieces": {
-      "@id": "iata:Piece/thisObjectId",
-      "@type": "iata:Piece"
-    },
-    "iata:transportMovement#transportedUlds": {
-      "@id": "iata:ULD/thisObjectId",
-      "@type": "iata:ULD"
-    }
-  },
-  "iata:bookingOptionRequest#allotment": "A-123456789",
-  "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
-  "iata:bookingOptionRequest#requestType": "BookingOptioNRequest",
-  "iata:bookingOptionRequest#requestedHandling": "EAW, SEC"
-}
