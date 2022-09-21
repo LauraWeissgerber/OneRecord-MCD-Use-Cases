@@ -4,7 +4,7 @@
    },
    "@type": "iata:BookingOptionRequest",
    "iata:bookingOptionRequest#bookingSegment" : {
-      "@id": "iata:BookingSegment/thisObjectId",
+      "@id": "BookingOptionRequest/bookingSegment",
       "@type": "iata:BookingSegment"
    },
    "iata:bookingOptionRequest#parties" : {
