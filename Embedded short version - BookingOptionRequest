@@ -35,38 +35,56 @@
     }
   },
   "iata:bookingOptionRequest#routingPreferences": {
-    "@id": "iata:Routing/thisObjectId",
     "@type": "iata:Routing",
     "iata:routing#scheduledLegs:": {
-      "@id": "iata:ScheduledLegs/thisObjectId",
+        "@type": "iata:ScheduledLegs",
+        "iata:scheduledLegs:arrivalLocation" : {
+            "@type": "iata:Location",
+            "iata:location#code": "JFK"
+        },
+        "iata:scheduledLegs:departureLocation" : {
+            "@type": "iata:Location",
+            "iata:location#code": "FRA"
+        },
       "@type": "iata:ScheduledLegs"
     },
-    "iata:routing#latestArrivalDateTime": "dateTime",
+    "iata:routing#latestArrivalDateTime": "2022-08-15T14:00:00",
     "iata:routing:maxConnections": 0
   },
   "iata:bookingOptionRequest#schedulePreferences": {
-    "@id": "iata:Schedule/thisObjectId",
-    "@type": "iata:Schedule"
+    "@type": "iata:Schedule",
+    "iata:schedule:latestAcceptanceTime" : "2022-08-09T12:05:00",
+    "iata:schedule:timeOfAvailability" : "2022-08-15T14:00:00",
   },
   "iata:bookingOptionRequest#shipmentDetails": {
-    "@id": "iata:Shipment/thisObjectId",
-    "@type": "iata:Shipment"
+    "@type": "iata:Shipment",
+    "iata:shipment:containedPieces" : {
+   "@id": "iata:Piece/thisObjectId",
+   "@type": "iata:Piece"
+    },
+    "iata:shipment:dimensions" : {
+   "@id": "iata:Dimensions/thisObjectId",
+   "@type": "iata:Dimensions"
+    },
+    "iata:shipment:totalGrossWeight" : {
+   "@id": "iata:Value/thisObjectId",
+   "@type": "iata:Value"
+    },
+    }
   },
   "iata:bookingOptionRequest#timePreferences": {
     "@type": "iata:BookingTimes",
-    "iata:bookingtimes:latestAcceptanceTime": "2022-08-09T12:05:00",
-    "iata:bookingtimes:timeOfAvailability": "2022-08-15T14:00:00"
+    "iata:bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
+    "iata:bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
   },
   "iata:bookingOptionRequest#transportMovement": {
     "@type": "iata:TransportSegment",
     "iata:transportMovement#arrivalLocation": {
-      "iata:location:code": "JFK",
-      "iata:locationTyoe": "airport",
+      "iata:location#code": "JFK"
       "@type": "iata:Location"
     },
     "iata:transportMovement#departureLocation": {
-      "iata:location:code": "FRA",
-      "iata:locationTyoe": "airport",
+      "iata:location#code": "FRA"
       "@type": "iata:Location"
     },
     "iata:transportMovement#movementTimes": {
