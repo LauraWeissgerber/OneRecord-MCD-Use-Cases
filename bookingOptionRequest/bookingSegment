@@ -3,21 +3,21 @@
       "iata": "https://onerecord.iata.org/"
    },
    "@type": "iata:BookingSegment",
-   "iata:bookingSegment:arrivalLocation" : {
+   "iata:bookingSegment#arrivalLocation" : {
       "@id": "iata:Location/thisObjectId",
       "@type": "iata:Location"
    },
-   "iata:bookingSegment:bookingOptions" : {
+   "iata:bookingSegment#bookingOptions" : {
       "@id": "iata:BookingOption/thisObjectId",
       "@type": "iata:BookingOption"
    },
-   "iata:bookingSegment:departureLocation" : {
+   "iata:bookingSegment#departureLocation" : {
       "@id": "iata:Location/thisObjectId",
       "@type": "iata:Location"
    },
-   "iata:bookingSegment:requests" : {
+   "iata:bookingSegment#requests" : {
       "@id": "iata:BookingOptionRequest/thisObjectId",
       "@type": "iata:BookingOptionRequest"
    },
-   "iata:bookingSegment:preferredTransportId" : "string"
+   "iata:bookingSegment#preferredTransportId" : "string"
 }
