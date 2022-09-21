@@ -86,6 +86,6 @@
   },
   "iata:bookingOptionRequest#allotment": "A-123456789",
   "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
-  "iata:bookingOptionRequest#requestType": "BookingOptioNRequest",
+  "iata:bookingOptionRequest#requestType": "BookingOptionRequest",
   "iata:bookingOptionRequest#requestedHandling": "EAW, SEC"
 }
