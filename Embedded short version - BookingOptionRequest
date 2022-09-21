@@ -52,7 +52,7 @@
           }
       },
       "iata:routing#latestArrivalDateTime": "2022-08-15T14:00:00",
-      "iata:routing:maxConnections": 0
+      "iata:routing:maxConnections": 30
   },
     "iata:bookingOptionRequest#schedulePreferences": {
       "@id": "bookingOptionRequest#schedulePreferences",
@@ -64,15 +64,28 @@
       "@id": "bookingOptionRequest#shipmentDetails",
       "@type": "iata:Shipment",
       "iata:shipment#containedPieces" : {
-     "@id": "iata:Piece/thisObjectId",
-     "@type": "iata:Piece"
-      },
+     "@type": "iata:Piece",
+    "iata:piece#dimensions" : {
+    "@type": "iata:Dimensions",
+    "iata:dimensions:height" : {
+    "@type": "iata:Value"
+},
+    "iata:dimensions:length" : {
+   "@type": "iata:Value"
+},
+    "iata:dimensions:volume" : {
+   "@type": "iata:Value"
+},
+    "iata:dimensions:width" : {
+   "@type": "iata:Value"
+}},
+      "iata:piece#stackable" : "true",
+      "iata:piece#turnable" : "false"
+    },
       "iata:shipment#dimensions" : {
-     "@id": "iata:Dimensions/thisObjectId",
      "@type": "iata:Dimensions"
       },
       "iata:shipment#totalGrossWeight" : {
-     "@id": "iata:Value/thisObjectId",
      "@type": "iata:Value"
       }
   },
@@ -108,6 +121,6 @@
   },
     "iata:bookingOptionRequest#allotment": "A-123456789",
     "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
-    "iata:bookingOptionRequest#requestType": "BookingOptioNRequest",
+    "iata:bookingOptionRequest#requestType": "BookingOptionRequest",
     "iata:bookingOptionRequest#requestedHandling": "EAW, SEC"
   }
