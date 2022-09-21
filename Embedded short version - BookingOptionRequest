@@ -67,17 +67,17 @@
      "@type": "iata:Piece",
     "iata:piece#dimensions" : {
     "@type": "iata:Dimensions",
-    "iata:dimensions:height" : {
-    "@type": "iata:Value"
-},
-    "iata:dimensions:length" : {
-   "@type": "iata:Value"
-},
-    "iata:dimensions:volume" : {
-   "@type": "iata:Value"
-},
-    "iata:dimensions:width" : {
-   "@type": "iata:Value"
+            "iata:dimensions:height" : {
+            "@type": "iata:Value"
+            },
+            "iata:dimensions:length" : {
+            "@type": "iata:Value"
+            },
+            "iata:dimensions:volume" : {
+            "@type": "iata:Value"
+            },
+            "iata:dimensions:width" : {
+            "@type": "iata:Value"
 }},
       "iata:piece#stackable" : "true",
       "iata:piece#turnable" : "false"
