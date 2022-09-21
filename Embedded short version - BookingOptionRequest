@@ -38,35 +38,34 @@
     "@type": "iata:Routing",
     "iata:routing#scheduledLegs:": {
         "@type": "iata:ScheduledLegs",
-        "iata:scheduledLegs:arrivalLocation" : {
+        "iata:scheduledLegs#arrivalLocation" : {
             "@type": "iata:Location",
             "iata:location#code": "JFK"
         },
-        "iata:scheduledLegs:departureLocation" : {
+        "iata:scheduledLegs#departureLocation" : {
             "@type": "iata:Location",
             "iata:location#code": "FRA"
         },
-      "@type": "iata:ScheduledLegs"
     },
     "iata:routing#latestArrivalDateTime": "2022-08-15T14:00:00",
     "iata:routing:maxConnections": 0
   },
   "iata:bookingOptionRequest#schedulePreferences": {
     "@type": "iata:Schedule",
-    "iata:schedule:latestAcceptanceTime" : "2022-08-09T12:05:00",
-    "iata:schedule:timeOfAvailability" : "2022-08-15T14:00:00",
+    "iata:schedule#latestAcceptanceTime" : "2022-08-09T12:05:00",
+    "iata:schedule#timeOfAvailability" : "2022-08-15T14:00:00",
   },
   "iata:bookingOptionRequest#shipmentDetails": {
     "@type": "iata:Shipment",
-    "iata:shipment:containedPieces" : {
+    "iata:shipment#containedPieces" : {
    "@id": "iata:Piece/thisObjectId",
    "@type": "iata:Piece"
     },
-    "iata:shipment:dimensions" : {
+    "iata:shipment#dimensions" : {
    "@id": "iata:Dimensions/thisObjectId",
    "@type": "iata:Dimensions"
     },
-    "iata:shipment:totalGrossWeight" : {
+    "iata:shipment#totalGrossWeight" : {
    "@id": "iata:Value/thisObjectId",
    "@type": "iata:Value"
     },
@@ -76,7 +75,7 @@
     "@type": "iata:BookingTimes",
     "iata:bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
     "iata:bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
-  },
+  }
   "iata:bookingOptionRequest#transportMovement": {
     "@type": "iata:TransportSegment",
     "iata:transportMovement#arrivalLocation": {
