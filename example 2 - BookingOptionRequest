@@ -49,63 +49,63 @@
         "@type": "iata:OtherIdentifier",
         "iata:OtherIdentifier#identifier": "1",
         "iata:OtherIdentifier#otherIdentifierType": "pieceGroupId",
-      "iata:Piece#dimensions": {
-        "@type": "iata:Dimensions",
-        "iata:Dimensions#height": {
-          "@type": "iata:Value",
-          "iata:Value#unit": "cm",
-          "iata:Value#value": "300"
-        },
-        "iata:Dimensions#length": {
-          "@type": "iata:Value",
-          "iata:Value#unit": "cm",
-          "iata:Value#value": "200"
-        },
-        "iata:Dimensions:width": {
-          "@type": "iata:Value",
-          "iata:Value#unit": "cm",
-          "iata:Value#value": "350"
-        }
-      },
-      "iata:Piece#GrossWeight":{          
-      "@type": "iata:Value",
-      "iata:Value#unit": "kg",
-      "iata:Value#value": "100"
-    },
-      "iata:Piece#stackable": "true",
-      "iata:Piece#turnable": "false"
-    }],
+            "iata:Piece#dimensions": {
+            "@type": "iata:Dimensions",
+                "iata:Dimensions#height": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "300"
+                },
+                "iata:Dimensions#length": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "200"
+                },
+                "iata:Dimensions:width": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "350"
+                }
+                },
+            "iata:Piece#GrossWeight":{          
+            "@type": "iata:Value",
+            "iata:Value#unit": "kg",
+            "iata:Value#value": "100"
+            },
+            "iata:Piece#stackable": "true",
+            "iata:Piece#turnable": "false"
+            }],
     [{
         "@type": "iata:Piece",
         "iata:Piece#otherIdentifiers": {
         "@type": "iata:OtherIdentifier",
         "iata:OtherIdentifier#identifier": "2",
         "iata:OtherIdentifier#otherIdentifierType": "pieceGroupId",
-        "iata:Piece#dimensions": {
-          "@type": "iata:Dimensions",
-          "iata:Dimensions#height": {
-            "@type": "iata:Value",
-            "iata:Value#unit": "cm",
-            "iata:Value#value": "300"
-          },
-          "iata:Dimensions#length": {
-            "@type": "iata:Value",
-            "iata:Value#unit": "cm",
-            "iata:Value#value": "200"
-          },
-          "iata:Dimensions:width": {
-            "@type": "iata:Value",
-            "iata:Value#unit": "cm",
-            "iata:Value#value": "350"
-          }
-        },
-        "iata:Piece#GrossWeight":{          
-        "@type": "iata:Value",
-        "iata:Value#unit": "kg",
-        "iata:Value#value": "100"
-      },
-        "iata:Piece#stackable": "true",
-        "iata:Piece#turnable": "false"
+            "iata:Piece#dimensions": {
+            "@type": "iata:Dimensions",
+                "iata:Dimensions#height": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "300"
+                },
+                "iata:Dimensions#length": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "200"
+                 },
+                "iata:Dimensions:width": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "350"
+                }
+                },
+            "iata:Piece#GrossWeight":{          
+                "@type": "iata:Value",
+                "iata:Value#unit": "kg",
+                "iata:Value#value": "100"
+                },
+            "iata:Piece#stackable": "true",
+            "iata:Piece#turnable": "false"
       }],
     "iata:Shipment#dimensions":{
       "iata:Dimensions#volume": {
