@@ -82,31 +82,37 @@
           "iata:Value#unit": "cm",
           "iata:Value#value": "200"
         },
-        "iata:Dimensions:volume": {
-          "@type": "iata:Value",
-          "iata:Value#unit": "string",
-          "iata:Value#value": "double"
-        },
         "iata:Dimensions:width": {
           "@type": "iata:Value",
           "iata:Value#unit": "cm",
           "iata:Value#value": "350"
         }
       },
+      "iata:Piece#GrossWeight":{          
+      "@type": "iata:Value",
+      "iata:Value#unit": "kg",
+      "iata:Value#value": "300"
+    },
       "iata:Piece#stackable": "true",
       "iata:Piece#turnable": "false"
     },
-    "iata:shipment#dimensions": {
-      "@type": "iata:Dimensions"
-    },
-    "iata:shipment#totalGrossWeight": {
-      "@type": "iata:Value"
+    "iata:shipment#dimensions":{
+      "iata:Dimensions#volume": {
+      "@type": "iata:Value",
+      "iata:Value#unit": "mc",
+      "iata:Value#value": "4"
     }
   },
-  "iata:BookingOptionRequest#timePreferences": {
-    "@type": "iata:BookingTimes",
-    "iata:bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
-    "iata:bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
+    "iata:shipment#volumetricWeight": {
+      "@type": "iata:Value",
+      "iata:Value#unit": "kg",
+      "iata:Value#value": "400"
+    },
+  "iata:Shipment#waybillNumber": {
+    "@type": "iata:Waybill",
+    "iata:Shipment#waybillNumber": "AWB123"
+  },
+  "iata:Shipment#totalPieceCount": "4"
   },
   "iata:bookingOptionRequest#allotment": "A-123456789",
   "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
