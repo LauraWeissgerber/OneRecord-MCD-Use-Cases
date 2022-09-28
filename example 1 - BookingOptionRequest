@@ -17,7 +17,7 @@
   "iata:BookingOptionRequest#parties": [
     {
       "@type": "iata:Party",
-      "iata:Party#partyRole": "Freight Forwarder",
+      "iata:Party#partyRole": "Agent",
       "iata:Party#otherIdentifiers": {
         "@type": "iata:OtherIdentifier",
         "iata:OtherIdentifier#identifier": "332242903",
@@ -32,15 +32,6 @@
         "iata:OtherIdentifier#identifier": "123456789",
         "iata:OtherIdentifier#otherIdentifierType": "consigneeId"
       }
-    },
-    {
-      "@type": "iata:Party",
-      "iata:Party#partyRole": "Freight Forwarder",
-      "iata:Party#otherIdentifiers": {
-        "@type": "iata:OtherIdentifier",
-        "iata:OtherIdentifier#identifier": "Max Mustermann",
-        "iata:OtherIdentifier#otherIdentifierType": "emergency contact"
-      }
     }
   ],
   "iata:BookingOptionRequest#ratingsPreference": {
@@ -50,25 +41,9 @@
       "iata:ranges#unitBasis": "EUR"
     }
   },
-  "iata:BookingOptionRequest#routingPreferences": {
-    "@type": "iata:Routing",
-    "iata:Routing#scheduledLegs:": {
-      "@type": "iata:ScheduledLegs",
-      "iata:ScheduledLegs#arrivalLocation": {
-        "@type": "iata:Location",
-        "iata:Location#code": "JFK"
-      },
-      "iata:ScheduledLegs#departureLocation": {
-        "@type": "iata:Location",
-        "iata:Location#code": "FRA"
-      }
-    },
-    "iata:Routing#latestArrivalDateTime": "2022-08-15T14:00:00",
-    "iata:Routing#maxConnections": 30
-  },
   "iata:BookingOptionRequest#shipmentDetails": {
     "@type": "iata:Shipment",
-    "iata:Shipment#containedPieces": {
+    "iata:Shipment#containedPieces": [{
       "@type": "iata:Piece",
       "iata:Piece#dimensions": {
         "@type": "iata:Dimensions",
@@ -91,19 +66,19 @@
       "iata:Piece#GrossWeight":{          
       "@type": "iata:Value",
       "iata:Value#unit": "kg",
-      "iata:Value#value": "300"
+      "iata:Value#value": "100"
     },
       "iata:Piece#stackable": "true",
       "iata:Piece#turnable": "false"
-    },
-    "iata:shipment#dimensions":{
+    }],
+    "iata:Shipment#dimensions":{
       "iata:Dimensions#volume": {
       "@type": "iata:Value",
       "iata:Value#unit": "mc",
       "iata:Value#value": "4"
     }
   },
-    "iata:shipment#volumetricWeight": {
+    "iata:Shipment#volumetricWeight": {
       "@type": "iata:Value",
       "iata:Value#unit": "kg",
       "iata:Value#value": "400"
@@ -114,8 +89,13 @@
   },
   "iata:Shipment#totalPieceCount": "4"
   },
+  "iata:BookingOptionRequest#timePreferences": {
+    "@type": "iata:BookingTimes",
+    "iata:Bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
+    "iata:Bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
+  },
   "iata:bookingOptionRequest#allotment": "A-123456789",
   "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
   "iata:bookingOptionRequest#requestType": "BookingOptionRequest",
-  "iata:bookingOptionRequest#requestedHandling": "EAW, SEC"
+  "iata:bookingOptionRequest#requestedHandling": "EAW, SEC, ICE"
 }
