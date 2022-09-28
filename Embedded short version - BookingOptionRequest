@@ -7,140 +7,107 @@
     "@type": "iata:BookingSegment",
     "iata:BookingSegment#arrivalLocation": {
       "@type": "iata:Location",
-      "iata:location#code": "JFK"
+      "iata:Location#code": "JFK"
     },
     "iata:BookingSegment#departureLocation": {
       "@type": "iata:Location",
-      "iata:location#code": "FRA"
-    }
-},
-  "iata:bookingOptionRequest#parties": {
-    "@id": "bookingOptionRequest#parties",
-    "@type": "iata:Party",
-    "iata:party#customer": {
-      "@type": "iata:OtherIdentifier",
-      "iata:otherIdentifier": 332242903,
-      "iata:otherIdentifier#otherIdentifierType": "customerId"
-    },
-    "iata:party:consignee": {
-      "@type": "iata:OtherIdentifier",
-      "iata:otherIdentifier": 123456789,
-      "iata:otherIdentifier#otherIdentifierType": "consigneeId"
+      "iata:Location#code": "FRA"
     }
   },
+  "iata:BookingOptionRequest#parties": [
+    {
+      "@type": "iata:Party",
+      "iata:Party#partyRole": "Freight Forwarder",
+      "iata:Party#otherIdentifiers": {
+        "@type": "iata:OtherIdentifier",
+        "iata:OtherIdentifier#identifier": "332242903",
+        "iata:OtherIdentifier#otherIdentifierType": "customerId"
+      }
+    },
+    {
+      "@type": "iata:Party",
+      "iata:Party#partyRole": "Consignee",
+      "iata:Party#otherIdentifiers": {
+        "@type": "iata:OtherIdentifier",
+        "iata:OtherIdentifier#identifier": "123456789",
+        "iata:OtherIdentifier#otherIdentifierType": "consigneeId"
+      }
+    },
+    {
+      "@type": "iata:Party",
+      "iata:Party#partyRole": "Freight Forwarder",
+      "iata:Party#otherIdentifiers": {
+        "@type": "iata:OtherIdentifier",
+        "iata:OtherIdentifier#identifier": "Max Mustermann",
+        "iata:OtherIdentifier#otherIdentifierType": "emergency contact"
+      }
+    }
+  ],
   "iata:BookingOptionRequest#ratingsPreference": {
     "@type": "iata:Ratings",
-    "iata:Ratings#ranges": {
+    "iata:ratings#ranges": {
       "@type": "iata:Ranges",
       "iata:ranges#unitBasis": "EUR"
     }
   },
-  "iata:bookingOptionRequest#routingPreferences": {
-    "@id": "bookingOptionRequest#routingPreferences",
+  "iata:BookingOptionRequest#routingPreferences": {
     "@type": "iata:Routing",
-    "iata:routing#scheduledLegs:": {
-        "@type": "iata:ScheduledLegs",
-        "iata:scheduledLegs#arrivalLocation" : {
-            "@type": "iata:Location",
-            "iata:location#code": "JFK"
-        },
-        "iata:scheduledLegs#departureLocation" : {
-            "@type": "iata:Location",
-            "iata:location#code": "FRA"
-        }
+    "iata:Routing#scheduledLegs:": {
+      "@type": "iata:ScheduledLegs",
+      "iata:ScheduledLegs#arrivalLocation": {
+        "@type": "iata:Location",
+        "iata:Location#code": "JFK"
+      },
+      "iata:ScheduledLegs#departureLocation": {
+        "@type": "iata:Location",
+        "iata:Location#code": "FRA"
+      }
     },
-    "iata:routing#latestArrivalDateTime": "2022-08-15T14:00:00",
-    "iata:routing:maxConnections": 30
-},
-  "iata:bookingOptionRequest#schedulePreferences": {
-    "@id": "bookingOptionRequest#schedulePreferences",
-    "@type": "iata:Schedule",
-    "iata:schedule#latestAcceptanceTime" : "2022-08-09T12:05:00",
-    "iata:schedule#timeOfAvailability" : "2022-08-15T14:00:00"
+    "iata:Routing#latestArrivalDateTime": "2022-08-15T14:00:00",
+    "iata:Routing#maxConnections": 30
   },
-  "iata:bookingOptionRequest#shipmentDetails": {
-    "@id": "bookingOptionRequest#shipmentDetails",
+  "iata:BookingOptionRequest#shipmentDetails": {
     "@type": "iata:Shipment",
-    "iata:shipment#containedPieces" : {
-   "@type": "iata:Piece",
-  "iata:piece#dimensions" : {
-  "@type": "iata:Dimensions",
-          "iata:dimensions:height" : {
+    "iata:Shipment#containedPieces": {
+      "@type": "iata:Piece",
+      "iata:Piece#dimensions": {
+        "@type": "iata:Dimensions",
+        "iata:Dimensions#height": {
           "@type": "iata:Value",
-          "iata:value:unit" : "cm",
-          "iata:value:value" : "300"
-          },
-          "iata:dimensions:length" : {
+          "iata:Value#unit": "cm",
+          "iata:Value#value": "300"
+        },
+        "iata:Dimensions#length": {
           "@type": "iata:Value",
-          "iata:value:unit" : "cm",
-          "iata:value:value" : "200"
-          },
-          "iata:dimensions:volume" : {
+          "iata:Value#unit": "cm",
+          "iata:Value#value": "200"
+        },
+        "iata:Dimensions:volume": {
           "@type": "iata:Value",
-          "iata:value:unit" : "string",
-          "iata:value:value" : "double"
-          },
-          "iata:dimensions:width" : {
+          "iata:Value#unit": "string",
+          "iata:Value#value": "double"
+        },
+        "iata:Dimensions:width": {
           "@type": "iata:Value",
-          "iata:value:unit" : "cm",
-          "iata:value:value" : "350"
-}},
-    "iata:piece#stackable" : "true",
-    "iata:piece#turnable" : "false"
-  },
-    "iata:shipment#dimensions" : {
-   "@type": "iata:Dimensions",       
-    "iata:dimensions:height" : {
-      "@type": "iata:Value",
-      "iata:value:unit" : "cm",
-      "iata:value:value" : "string"
+          "iata:Value#unit": "cm",
+          "iata:Value#value": "350"
+        }
       },
-      "iata:dimensions:length" : {
-      "@type": "iata:Value",
-      "iata:value:unit" : "cm",
-      "iata:value:value" : "string"
-      },
-      "iata:dimensions:volume" : {
-      "@type": "iata:Value",
-      "iata:value:unit" : "mc",
-      "iata:value:value" : "4"
-      },
-      "iata:dimensions:width" : {
-      "@type": "iata:Value",
-      "iata:value:unit" : "cm",
-      "iata:value:value" : "string"
+      "iata:Piece#stackable": "true",
+      "iata:Piece#turnable": "false"
+    },
+    "iata:shipment#dimensions": {
+      "@type": "iata:Dimensions"
+    },
+    "iata:shipment#totalGrossWeight": {
+      "@type": "iata:Value"
     }
   },
-    "iata:shipment#totalGrossWeight" : {
-   "@type": "iata:Value",
-      "iata:value:unit" : "kg",
-      "iata:value:value" : "string"
-    }
-},
   "iata:BookingOptionRequest#timePreferences": {
     "@type": "iata:BookingTimes",
     "iata:bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
     "iata:bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
   },
-  "iata:BookingOptionRequest#transportMovement": {
-    "@type": "iata:TransportSegment",
-    "iata:TransportMovement#arrivalLocation": {
-      "iata:location#code": "JFK",
-      "@type": "iata:Location"
-    },
-    "iata:TransportMovement#departureLocation": {
-      "iata:location#code": "FRA",
-      "@type": "iata:Location"
-    },
-    "iata:transportMovement#transportedPieces": {
-      "@id": "iata:Piece/thisObjectId",
-      "@type": "iata:Piece"
-    },
-    "iata:transportMovement#transportedUlds": {
-      "@id": "iata:ULD/thisObjectId",
-      "@type": "iata:ULD"
-    }
-},
   "iata:bookingOptionRequest#allotment": "A-123456789",
   "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
   "iata:bookingOptionRequest#requestType": "BookingOptionRequest",
