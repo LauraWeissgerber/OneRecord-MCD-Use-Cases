@@ -8,7 +8,8 @@
       "@type": "iata:BookingSegment"
    },
    "iata:bookingOptionRequest:parties" : {
-      "@id": "iata:Party/thisObjectId",
+      "@id": "iata:Party/Consignee",
+      "@id": "iata:Party/Agent",
       "@type": "iata:Party"
    },
    "iata:bookingOptionRequest:ratingsPreference" : {
