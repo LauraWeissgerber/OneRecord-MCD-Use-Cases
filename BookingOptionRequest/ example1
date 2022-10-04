@@ -1,0 +1,191 @@
+{
+  "@context": {
+    "iata": "https://onerecord.iata.org/"
+  },
+  "@type": "iata:BookingOptionRequest",
+  "iata:BookingOptionRequest#bookingSegment": {
+    "@type": "iata:BookingSegment",
+    "iata:BookingSegment#arrivalLocation": {
+      "@type": "iata:Location",
+      "iata:Location#code": "JFK"
+    },
+    "iata:BookingSegment#departureLocation": {
+      "@type": "iata:Location",
+      "iata:Location#code": "FRA"
+    }
+  },
+  "iata:BookingOptionRequest#parties": [
+    {
+      "@type": "iata:Party",
+      "iata:Party#partyRole": "Agent",
+      "iata:Party#otherIdentifiers": {
+        "@type": "iata:OtherIdentifier",
+        "iata:OtherIdentifier#identifier": "332242903",
+        "iata:OtherIdentifier#otherIdentifierType": "customerId"
+      }
+    },
+    {
+      "@type": "iata:Party",
+      "iata:Party#partyRole": "Consignee",
+      "iata:Party#otherIdentifiers": {
+        "@type": "iata:OtherIdentifier",
+        "iata:OtherIdentifier#identifier": "123456789",
+        "iata:OtherIdentifier#otherIdentifierType": "consigneeId"
+      }
+    }
+  ],
+  "iata:BookingOptionRequest#ratingsPreference": {
+    "@type": "iata:Ratings",
+    "iata:ratings#ranges": {
+      "@type": "iata:Ranges",
+      "iata:ranges#unitBasis": "EUR"
+    }
+  },
+  "iata:BookingOptionRequest#shipmentDetails": {
+    "@type": "iata:Shipment",
+    "iata:Shipment#dimensions":{
+      "iata:Dimensions#volume": {
+      "@type": "iata:Value",
+      "iata:Value#unit": "mc",
+      "iata:Value#value": "4"
+    }
+  },
+    "iata:Shipment#volumetricWeight": {
+      "@type": "iata:Value",
+      "iata:Value#unit": "kg",
+      "iata:Value#value": "400"
+  },
+    "iata:Shipment#totalPieceCount": "4"  
+  },
+    "iata:Shipment#containedPieces": [
+        {
+        "@type": "iata:Piece",
+        "iata:Piece#dimensions": {
+            "@type": "iata:Dimensions",
+                "iata:Dimensions#height": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "300"
+                },
+                "iata:Dimensions#length": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "200"
+                },
+                "iata:Dimensions:width": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "350"
+                }
+        },
+        "iata:Piece#GrossWeight":{          
+            "@type": "iata:Value",
+            "iata:Value#unit": "kg",
+            "iata:Value#value": "100"
+        },
+        "iata:Piece#stackable": "true",
+        "iata:Piece#turnable": "false",
+        "iata:Piece#dryIce": "true"
+        },
+        {
+        "@type": "iata:Piece",
+        "iata:Piece#dimensions": {
+                "@type": "iata:Dimensions",
+                    "iata:Dimensions#height": {
+                    "@type": "iata:Value",
+                    "iata:Value#unit": "cm",
+                    "iata:Value#value": "300"
+                    },
+                    "iata:Dimensions#length": {
+                    "@type": "iata:Value",
+                    "iata:Value#unit": "cm",
+                    "iata:Value#value": "200"
+                    },
+                    "iata:Dimensions:width": {
+                    "@type": "iata:Value",
+                    "iata:Value#unit": "cm",
+                    "iata:Value#value": "350"
+                    }
+        },
+        "iata:Piece#GrossWeight":{          
+                "@type": "iata:Value",
+                "iata:Value#unit": "kg",
+                "iata:Value#value": "100"
+        },
+        "iata:Piece#stackable": "true",
+        "iata:Piece#turnable": "false",
+        "iata:Piece#dryIce": "true"
+        },
+        {
+        "@type": "iata:Piece",
+        "iata:Piece#dimensions": {
+                "@type": "iata:Dimensions",
+                    "iata:Dimensions#height": {
+                    "@type": "iata:Value",
+                    "iata:Value#unit": "cm",
+                    "iata:Value#value": "300"
+                    },
+                    "iata:Dimensions#length": {
+                    "@type": "iata:Value",
+                    "iata:Value#unit": "cm",
+                    "iata:Value#value": "200"
+                    },
+                    "iata:Dimensions:width": {
+                    "@type": "iata:Value",
+                    "iata:Value#unit": "cm",
+                    "iata:Value#value": "350"
+                    }
+        },
+        "iata:Piece#GrossWeight":{          
+                "@type": "iata:Value",
+                "iata:Value#unit": "kg",
+                "iata:Value#value": "100"
+        },
+        "iata:Piece#stackable": "true",
+        "iata:Piece#turnable": "false",
+        "iata:Piece#dryIce": "true"
+        },
+        {
+        "@type": "iata:Piece",
+        "iata:Piece#dimensions":{
+            "@type": "iata:Dimensions",
+                "iata:Dimensions#height": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "300"
+                },
+                "iata:Dimensions#length": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "200"
+                 },
+                "iata:Dimensions:width": {
+                "@type": "iata:Value",
+                "iata:Value#unit": "cm",
+                "iata:Value#value": "350"
+                }    
+        },
+        "iata:Piece#GrossWeight":{          
+            "@type": "iata:Value",
+            "iata:Value#unit": "kg",
+            "iata:Value#value": "100"
+        },        
+        "iata:Piece#stackable": "true",
+        "iata:Piece#turnable": "false",
+        "iata:Piece#dryIce": "true"
+        }
+        ],
+  "iata:Shipment#waybillNumber": {
+    "@type": "iata:Waybill",
+    "iata:Shipment#waybillNumber": "AWB123"
+  },
+  "iata:BookingOptionRequest#timePreferences": {
+    "@type": "iata:BookingTimes",
+    "iata:Bookingtimes#latestAcceptanceTime": "2022-08-09T12:05:00",
+    "iata:Bookingtimes#timeOfAvailability": "2022-08-15T14:00:00"
+  },
+  "iata:bookingOptionRequest#allotment": "A-123456789",
+  "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
+  "iata:bookingOptionRequest#requestType": "BookingOptionRequest",
+  "iata:bookingOptionRequest#requestedHandling": "EAW, SEC, ICE"
+}
