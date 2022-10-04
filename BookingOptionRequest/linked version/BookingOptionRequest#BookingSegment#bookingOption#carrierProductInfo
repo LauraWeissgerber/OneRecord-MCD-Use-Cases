@@ -1,0 +1,8 @@
+{
+   "@context": {
+      "iata": "https://onerecord.iata.org/"
+   },
+   "@type": "iata:CarrierProduct",
+   "iata:carrierProduct:productCode" : "FCP",
+   "iata:carrierProduct:productDescription" : "string"
+}
