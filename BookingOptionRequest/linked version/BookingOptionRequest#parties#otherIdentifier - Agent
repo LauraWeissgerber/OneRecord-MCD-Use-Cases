@@ -1,0 +1,8 @@
+{
+   "@context": {
+      "iata": "https://onerecord.iata.org/"
+   },
+   "@type": "iata:OtherIdentifier",
+   "iata:otherIdentifier:identifier" : "332242903",
+   "iata:otherIdentifier:otherIdentifierType" : "customerId"
+}
