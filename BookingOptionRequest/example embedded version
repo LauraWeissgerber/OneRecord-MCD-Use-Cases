@@ -60,10 +60,44 @@
         "iata:Value#unit": "kg",
         "iata:Value#value": "400"
     },
-      "iata:Shipment#totalPieceCount": "4"  
-    },
-      "iata:Shipment#containedPieces": [
-          {
+      "iata:Shipment#totalPieceCount": "2",
+      "iata:Shipment#containedPieces":  [
+        {
+          "@type": "iata:Piece",
+          "iata:Piece#dimensions": {
+              "@type": "iata:Dimensions",
+                  "iata:Dimensions#height": {
+                  "@type": "iata:Value",
+                  "iata:Value#unit": "cm",
+                  "iata:Value#value": "300"
+                  },
+                  "iata:Dimensions#length": {
+                  "@type": "iata:Value",
+                  "iata:Value#unit": "cm",
+                  "iata:Value#value": "200"
+                  },
+                  "iata:Dimensions:width": {
+                  "@type": "iata:Value",
+                  "iata:Value#unit": "cm",
+                  "iata:Value#value": "350"
+                  }
+             },
+            "iata:Piece#GrossWeight":{          
+              "@type": "iata:Value",
+              "iata:Value#unit": "kg",
+              "iata:Value#value": "100"
+            },
+            "iata:Piece#stackable": "true",
+           "iata:Piece#turnable": "false",
+           "iata:Piece#dryIce": "true",
+           "iata:Piece#handlingInstructions": {
+            "@type": "iata:HandlingInstructions", 
+            "iata:handlinginstructions:serviceDescription" : "string",
+            "iata:handlinginstructions:serviceType" : "dryIce",
+            "iata:handlinginstructions:serviceTypeCode" : "string"
+            } 
+        },
+        {
           "@type": "iata:Piece", 
           "iata:Piece#dimensions": {
               "@type": "iata:Dimensions",
@@ -90,104 +124,22 @@
             },
             "iata:Piece#stackable": "true",
            "iata:Piece#turnable": "false",
-           "iata:Piece#dryIce": "true"
-            },
-          {
-          "@type": "iata:Piece",
-          "iata:Piece#dimensions": {
-                  "@type": "iata:Dimensions",
-                      "iata:Dimensions#height": {
-                      "@type": "iata:Value",
-                      "iata:Value#unit": "cm",
-                      "iata:Value#value": "300"
-                      },
-                      "iata:Dimensions#length": {
-                      "@type": "iata:Value",
-                      "iata:Value#unit": "cm",
-                      "iata:Value#value": "200"
-                      },
-                      "iata:Dimensions:width": {
-                      "@type": "iata:Value",
-                      "iata:Value#unit": "cm",
-                      "iata:Value#value": "350"
-                      }
-          },
-          "iata:Piece#GrossWeight":{          
-                  "@type": "iata:Value",
-                  "iata:Value#unit": "kg",
-                  "iata:Value#value": "100"
-          },
-          "iata:Piece#stackable": "true",
-          "iata:Piece#turnable": "false",
-          "iata:Piece#dryIce": "true"
-          },
-          {
-          "@type": "iata:Piece",
-          "iata:Piece#dimensions": {
-                  "@type": "iata:Dimensions",
-                      "iata:Dimensions#height": {
-                      "@type": "iata:Value",
-                      "iata:Value#unit": "cm",
-                      "iata:Value#value": "300"
-                      },
-                      "iata:Dimensions#length": {
-                      "@type": "iata:Value",
-                      "iata:Value#unit": "cm",
-                      "iata:Value#value": "200"
-                      },
-                      "iata:Dimensions:width": {
-                      "@type": "iata:Value",
-                      "iata:Value#unit": "cm",
-                      "iata:Value#value": "350"
-                      }
-          },
-          "iata:Piece#GrossWeight":{          
-                  "@type": "iata:Value",
-                  "iata:Value#unit": "kg",
-                  "iata:Value#value": "100"
-          },
-          "iata:Piece#stackable": "true",
-          "iata:Piece#turnable": "false",
-          "iata:Piece#dryIce": "true"
-          },
-          {
-          "@type": "iata:Piece",
-          "iata:Piece#dimensions":{
-              "@type": "iata:Dimensions",
-                  "iata:Dimensions#height": {
-                  "@type": "iata:Value",
-                  "iata:Value#unit": "cm",
-                  "iata:Value#value": "300"
-                  },
-                  "iata:Dimensions#length": {
-                  "@type": "iata:Value",
-                  "iata:Value#unit": "cm",
-                  "iata:Value#value": "200"
-                   },
-                  "iata:Dimensions:width": {
-                  "@type": "iata:Value",
-                  "iata:Value#unit": "cm",
-                  "iata:Value#value": "350"
-                  }    
-          },
-          "iata:Piece#GrossWeight":{          
-              "@type": "iata:Value",
-              "iata:Value#unit": "kg",
-              "iata:Value#value": "100"
-          },        
-          "iata:Piece#stackable": "true",
-          "iata:Piece#turnable": "false",
-          "iata:Piece#dryIce": "true"
-          }
-          ],
-          {
-            "@type:": "iata:Piece",
+           "iata:Piece#dryIce": "true",
+           "iata:Piece#handlingInstructions": {
+            "@type": "iata:HandlingInstructions", 
+            "iata:handlinginstructions:serviceDescription" : "string",
+            "iata:handlinginstructions:serviceType" : "dryIce",
+            "iata:handlinginstructions:serviceTypeCode" : "string"
+            } 
+        },
+        { 
+          "@type": "iata:Piece", {
             "iata:Piece#uldPreference":{
-             "@type": "iata:Uld",  
-             "iata:Uld#tareWeight":{
-                 "@type": "iata:Value",  
-                 "iata:Value#unit": "kg",
-                 "iata:Value#value": "400"
+                "@type": "iata:Uld",  
+                "iata:Uld#tareWeight":{
+                    "@type": "iata:Value",  
+                    "iata:Value#unit": "kg",
+                    "iata:Value#value": "400"
              },
              "iata:Uld#uldTypeCode": "Uld123",
              "iata:Uld#uldContourCode": "contourCode123",
@@ -196,10 +148,14 @@
                  "@type": "iata:Value",  
                  "iata:Value#unit": "kg",
                  "iata:Value#value": "25"
-             }},
+             }}
+            }
+        }
+    ],
     "iata:Shipment#waybillNumber": {
       "@type": "iata:Waybill",
       "iata:Shipment#waybillNumber": "AWB123"
+    },
     },
     "iata:BookingOptionRequest#timePreferences": {
       "@type": "iata:BookingTimes",
