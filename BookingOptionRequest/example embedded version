@@ -64,14 +64,30 @@
             "@type": "iata:Company",
             "iata:company:branch" : {
             "@type": "iata:CompanyBranch",
-                    "iata:companybranch:contactPersons" : {
+                    "iata:companybranch:contactPersons" : [
+                    {
                     "@type": "iata:Person",
-                            "iata:person:contact" : {
-                            "@type": "iata:Contact",
-                            "iata:contact:contactType" : "emergencyContact",
-                            "iata:contact:contactValue" : "Max Mustermann"
-                            }
+                    "iata:person#contactType": "Emergency contact",
+                    "iata:person#firstName": "Max",
+                    "iata:person#lastName": "Mustermann"
                     },
+                    {
+                    "@type": "iata:Person",
+                    "iata:person#contactType": "Other",
+                    "iata:person:contactDetails" : [
+                      {
+                      "@type": "iata:Contact",
+                      "iata:contact:contactType" : "Email address",
+                      "iata:contact:contactValue" : "Max.Mustermann@muster.com"
+                      },
+                      {
+                        "@type": "iata:Contact",
+                        "iata:contact:contactType" : "Phone number",
+                        "iata:contact:contactValue" : "017621889012"
+                      }
+                    ]
+                    }
+                    ],
                     "iata:companybranch:location" : {
                     "@type": "iata:Location",
                             "iata:location:address" : {
@@ -81,19 +97,7 @@
                                     "iata:country:countryCode" : "DE"
                                     }
                             }
-                     },
-                    "iata:companybranch:otherIdentifiers" : [
-                        {
-                        "@type": "iata:OtherIdentifier",
-                        "iata:otherIdentifier:identifier" : "+49123456789",
-                        "iata:otherIdentifier:otherIdentifierType" : "telephone"
-                        },
-                        {
-                        "@type": "iata:OtherIdentifier",
-                        "iata:otherIdentifier:identifier" : "max.mustermann@max.de",
-                        "iata:otherIdentifier:otherIdentifierType" : "E-Mail"
-                        }
-                    ]
+                    }
             }
      },
       "iata:Shipment#dimensions":{
@@ -250,7 +254,7 @@
     "iata:BookingOptionRequest#unitsPreference":{
       "@type": "iata:Value",
       "iata:value#unit": "EUR",
-      "iata:value#value": "string"
+      "iata:value#value": "currency"
     },
     "iata:BookingOptionRequest#routingPreference":{
         "@type": "iata:Routing",
