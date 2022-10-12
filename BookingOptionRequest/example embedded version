@@ -54,7 +54,12 @@
       }
     },
     "iata:BookingOptionRequest#shipmentDetails": {
-      "@type": "iata:Shipment",
+      "@type": "iata:Shipment", 
+      "iata:Shipment#emergencyContact": {
+        "@type": "iata:Person",
+                  "iata:person#firstName" : "Max",
+                  "iata:person#lastName" : "Mustermann"
+                  },
       "iata:Shipment#shipper": {
             "@type": "iata:Company",
             "iata:company:branch" : {
@@ -123,8 +128,7 @@
             "iata:Value#unit": "kg",
             "iata:Value#value": "400"
             },
-        "iata:Uld#uldTypeCode": "Uld123",
-        "iata:Uld#uldContourCode": "contourCode123",
+        "iata:Uld#uldTypeCode": "contourCode123",
         "iata:Uld#uldDryIce": "true",
         "iata:Uld#dryIceWeight":{
             "@type": "iata:Value",  
@@ -162,12 +166,28 @@
             "iata:Piece#stackable": "true",
            "iata:Piece#turnable": "false",
            "iata:Piece#dryIce": "true",
-           "iata:Piece#handlingInstructions": {
+           "iata:Piece#handlingInstructions": [
+            {
             "@type": "iata:HandlingInstructions", 
             "iata:handlinginstructions:serviceDescription" : "dryIce",
             "iata:handlinginstructions:serviceType" : "string",
             "iata:handlinginstructions:serviceTypeCode" : "string"
-            } 
+            },
+            {
+              "@type": "iata:HandlingInstructions", 
+              "iata:handlinginstructions:serviceType" : "temperature sensitive",
+                     "iata:serviceType#minTemperature":{     
+                      "@type": "iata:Value",
+                      "iata:Value#unit": "C",
+                      "iata:Value#value": "0"
+                      },
+                      "iata:serviceType#maxTemperature":{     
+                        "@type": "iata:Value",
+                        "iata:Value#unit": "C",
+                        "iata:Value#value": "10"
+                      } 
+              }
+            ]
         },
         {
           "@type": "iata:Piece", 
@@ -197,12 +217,28 @@
             "iata:Piece#stackable": "true",
            "iata:Piece#turnable": "false",
            "iata:Piece#dryIce": "true",
-           "iata:Piece#handlingInstructions": {
+           "iata:Piece#handlingInstructions": [
+            {
             "@type": "iata:HandlingInstructions", 
             "iata:handlinginstructions:serviceDescription" : "dryIce",
             "iata:handlinginstructions:serviceType" : "string",
             "iata:handlinginstructions:serviceTypeCode" : "string"
-            } 
+            },
+            {
+              "@type": "iata:HandlingInstructions", 
+              "iata:handlinginstructions:serviceType" : "temperature sensitive",
+                     "iata:serviceType#minTemperature":{     
+                      "@type": "iata:Value",
+                      "iata:Value#unit": "C",
+                      "iata:Value#value": "0"
+                      },
+                      "iata:serviceType#maxTemperature":{     
+                        "@type": "iata:Value",
+                        "iata:Value#unit": "C",
+                        "iata:Value#value": "10"
+                      } 
+            }
+            ]
         }
     ]
     },
