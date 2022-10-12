@@ -12,13 +12,19 @@
     "iata:BookingSegment#departureLocation": {
       "@type": "iata:Location",
       "iata:Location#code": "FRA"
+    }
     },
-    "iata:BookingSegment#bookingOption":{
-      "@type": "BookingOption",
-        "iata:BookingOption#carrierProductInfo":{
-        "@type":"iata:carrierProduct",
-        "iata:carrierProduct#productCode":"FCP"
-  }}},
+    "iata:BookingOptionRequest#bookingOption":{
+    "type": "iata:bookingOption",
+        "iata:bookingOption#waybillNumber": {
+        "type": "iata:Waybill",
+        "iata:waybill#waybillNumber" : "AWB123"
+        },
+        "iata:bookingOption#carrier" : {
+            "@type": "iata:carrier",
+            "iata:carrier#airlineCode" : "LH"
+        }
+    },
     "iata:BookingOptionRequest#parties": [
       {
         "@type": "iata:Party",
@@ -43,23 +49,89 @@
       "@type": "iata:Ratings",
       "iata:ratings#ranges": {
         "@type": "iata:Ranges",
-        "iata:ranges#unitBasis": "EUR"
+        "iata:ranges#unitBasis": "string",
+        "iata:rating#promoCode": "promoCode1234"
       }
     },
     "iata:BookingOptionRequest#shipmentDetails": {
       "@type": "iata:Shipment",
+      "iata:Shipment#shipper": {
+            "@type": "iata:Company",
+            "iata:company:branch" : {
+            "@type": "iata:CompanyBranch",
+                    "iata:companybranch:contactPersons" : {
+                    "@type": "iata:Person",
+                            "iata:person:contact" : {
+                            "@type": "iata:Contact",
+                            "iata:contact:contactType" : "emergencyContact",
+                            "iata:contact:contactValue" : "Max Mustermann"
+                            }
+                    },
+                    "iata:companybranch:location" : {
+                    "@type": "iata:Location",
+                            "iata:location:address" : {
+                            "@type": "iata:Address",
+                                    "iata:address:country" : {
+                                    "@type": "iata:Country",
+                                    "iata:country:countryCode" : "DE"
+                                    }
+                            }
+                     },
+                    "iata:companybranch:otherIdentifiers" : [
+                        {
+                        "@type": "iata:OtherIdentifier",
+                        "iata:otherIdentifier:identifier" : "+49123456789",
+                        "iata:otherIdentifier:otherIdentifierType" : "telephone"
+                        },
+                        {
+                        "@type": "iata:OtherIdentifier",
+                        "iata:otherIdentifier:identifier" : "max.mustermann@max.de",
+                        "iata:otherIdentifier:otherIdentifierType" : "E-Mail"
+                        }
+                    ]
+            }
+     },
       "iata:Shipment#dimensions":{
-        "iata:Dimensions#volume": {
+       "iata:Dimensions#volume": {
         "@type": "iata:Value",
         "iata:Value#unit": "mc",
         "iata:Value#value": "4"
       }
     },
       "iata:Shipment#volumetricWeight": {
+        "@type": "iata:VolumetricWeight",
+        "iata:volumetricWeight:chargeableWeight" : {
+            "@type": "iata:Value",
+            "iata:Value#unit": "string",
+            "iata:Value#value": "string"
+        },
+        "iata:volumetricWeight:conversionFactor" : {
+            "@type": "iata:Value",
+            "iata:Value#unit": "string",
+            "iata:Value#value": "string"
+        }
+    },
+    "iata:shipment:totalGrossWeight" : {
         "@type": "iata:Value",
         "iata:Value#unit": "kg",
         "iata:Value#value": "400"
     },
+    "iata:Piece#uldPreference":{
+        "@type": "iata:Uld",  
+        "iata:Uld#tareWeight":{
+            "@type": "iata:Value",  
+            "iata:Value#unit": "kg",
+            "iata:Value#value": "400"
+            },
+        "iata:Uld#uldTypeCode": "Uld123",
+        "iata:Uld#uldContourCode": "contourCode123",
+        "iata:Uld#uldDryIce": "true",
+        "iata:Uld#dryIceWeight":{
+            "@type": "iata:Value",  
+            "iata:Value#unit": "kg",
+            "iata:Value#value": "25"
+            }
+     },
       "iata:Shipment#totalPieceCount": "2",
       "iata:Shipment#containedPieces":  [
         {
@@ -92,8 +164,8 @@
            "iata:Piece#dryIce": "true",
            "iata:Piece#handlingInstructions": {
             "@type": "iata:HandlingInstructions", 
-            "iata:handlinginstructions:serviceDescription" : "string",
-            "iata:handlinginstructions:serviceType" : "dryIce",
+            "iata:handlinginstructions:serviceDescription" : "dryIce",
+            "iata:handlinginstructions:serviceType" : "string",
             "iata:handlinginstructions:serviceTypeCode" : "string"
             } 
         },
@@ -127,35 +199,12 @@
            "iata:Piece#dryIce": "true",
            "iata:Piece#handlingInstructions": {
             "@type": "iata:HandlingInstructions", 
-            "iata:handlinginstructions:serviceDescription" : "string",
-            "iata:handlinginstructions:serviceType" : "dryIce",
+            "iata:handlinginstructions:serviceDescription" : "dryIce",
+            "iata:handlinginstructions:serviceType" : "string",
             "iata:handlinginstructions:serviceTypeCode" : "string"
             } 
-        },
-        { 
-          "@type": "iata:Piece", {
-            "iata:Piece#uldPreference":{
-                "@type": "iata:Uld",  
-                "iata:Uld#tareWeight":{
-                    "@type": "iata:Value",  
-                    "iata:Value#unit": "kg",
-                    "iata:Value#value": "400"
-             },
-             "iata:Uld#uldTypeCode": "Uld123",
-             "iata:Uld#uldContourCode": "contourCode123",
-             "iata:Uld#uldDryIce": "true",
-             "iata:Uld#dryIceWeight":{
-                 "@type": "iata:Value",  
-                 "iata:Value#unit": "kg",
-                 "iata:Value#value": "25"
-             }}
-            }
         }
-    ],
-    "iata:Shipment#waybillNumber": {
-      "@type": "iata:Waybill",
-      "iata:Shipment#waybillNumber": "AWB123"
-    },
+    ]
     },
     "iata:BookingOptionRequest#timePreferences": {
       "@type": "iata:BookingTimes",
@@ -164,11 +213,18 @@
     },
     "iata:BookingOptionRequest#unitsPreference":{
       "@type": "iata:Value",
-      "iata:value#unit": "string",
+      "iata:value#unit": "EUR",
       "iata:value#value": "string"
     },
+    "iata:BookingOptionRequest#routingPreference":{
+        "@type": "iata:Routing",
+        "iata:routing#maxConnections": "0"
+    },
     "iata:bookingOptionRequest#allotment": "A-123456789",
+    "iata:bookingOptionRequest#quotationId": "QuoteId1234",
     "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
+    "iata:bookingOptionRequest#expectedSpeed": "td.Flash",
+    "iata:bookingOptionRequest#expectedCarrierProductCode": "FCP",
     "iata:bookingOptionRequest#requestType": "BookingOptionRequest",
     "iata:bookingOptionRequest#requestedHandling": "EAW, SEC, ICE"
   }
