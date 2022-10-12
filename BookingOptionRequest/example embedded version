@@ -260,11 +260,15 @@
         "@type": "iata:Routing",
         "iata:routing#maxConnections": "0"
     },
+    "iata:BookingOptionRequest#carrierProduct":{
+      "@type": "iata:carrierProduct",
+      "iata:carrierProduct#productCode": "FCP",
+      "iata:carrierProduct#productDescription": "string",
+      "iata:carrierProduct#speed": "td.Flash"
+  },
     "iata:bookingOptionRequest#allotment": "A-123456789",
     "iata:bookingOptionRequest#quotationId": "QuoteId1234",
     "iata:bookingOptionRequest#expectedCommodities": "OTHPHARMA PER",
-    "iata:bookingOptionRequest#expectedSpeed": "td.Flash",
-    "iata:bookingOptionRequest#expectedCarrierProductCode": "FCP",
     "iata:bookingOptionRequest#requestType": "BookingOptionRequest",
     "iata:bookingOptionRequest#requestedHandling": "EAW, SEC, ICE"
   }
