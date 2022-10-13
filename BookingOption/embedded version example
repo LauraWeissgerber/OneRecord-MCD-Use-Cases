@@ -23,6 +23,6 @@
   },
   "iata:BookingOption#BookingOptionRequest": {
   "@type": "iata:BookingOptionRequest",
-  "@id": "iata:BookingOption/thisObjectId"
+  "@id": "iata:BookingOption/BookingOptionRequest/Id"
   }
 }
