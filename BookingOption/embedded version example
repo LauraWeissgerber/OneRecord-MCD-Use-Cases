@@ -21,8 +21,64 @@
   "iata:bookingTimes#lastestAcceptanceTime" : "2022-01-22T08:50",
   "iata:bookingTimes#timeOfAvaibility": "2022-01-22T17:40"
   },
+  "iata:bookingOption#CO2Emissions" : {
+    "@type": "iata:CO2Emissions",
+    "iata:bookingOption#calculatedEmissions" : "2075.60"
+  },
+  "iata:bookingOption#price" : {
+    "@type": "iata:Price",
+    "iata:Price#grandTotal" : {
+        "@type": "iata:Value",
+        "iata:Value#value": "5122.56",
+        "iata:Value#unit": "EUR"
+    },
+    "iata:Price#ratings":[
+      {
+      "@type": "iata:Ratings",
+      "iata:Ratings#chargeType": "QTE",
+      "iata:Ratings#chargePaymentType": "P",
+      "iata:Ratings#subTotal":{
+        "@type": "iata:Value",
+        "iata:Value#value": "7.68",
+        "iata:Value#unit": "EUR"
+        }
+      },
+      {
+        "@type": "iata:Ratings",
+        "iata:Ratings#chargeType": "Surchages",
+        "iata:Ratings#chargeCode": "code123",
+        "iata:Ratings#chargeDescription": "Total Surcharge",
+        "iata:Ratings#subTotal":{
+          "@type": "iata:Value",
+          "iata:Value#value": "566.95",
+          "iata:Value#unit": "EUR"
+          }
+      }
+    ]
+  },
+  "iata:bookingOption#Routing" : {
+    "@type": "iata:Routing",
+    "iata:Routing#aircraftPossibilityCode" : "74H",
+    "iata:Routing#ScheduledLegs": {
+      "@type": "iata:ScheduluedLegs",
+      "iata:ScheduledLegs#sequenceNumber" : "1",
+      "iata:ScheduledLegs#arrivalDate" : "2022-01-22T13:40",
+      "iata:ScheduledLegs#arrivalLocation" : {
+        "@type": "iata:Location",
+        "iata:Location#code" : "JFK"
+      },
+      "iata:ScheduledLegs#depatureDate" : "2022-01-22T10:50",
+      "iata:ScheduledLegs#depatureLocation" : {
+        "@type": "iata:Location",
+        "iata:Location#code" : "FRA"
+      },
+      "iata:ScheduledLegs#transportId" : "LH400"
+      }
+  },
   "iata:BookingOption#BookingOptionRequest": {
   "@type": "iata:BookingOptionRequest",
   "@id": "iata:BookingOption/BookingOptionRequest/Id"
-  }
+  },
+  "iata:bookingOption#offerValidFrom": "2022-01-20T12:40",
+  "iata:bookingOption#offerValidTo": "2022-01-20T13:10"
 }
