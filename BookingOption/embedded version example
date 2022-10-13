@@ -1,0 +1,28 @@
+{
+    "@context": {
+      "iata": "https://onerecord.iata.org/"
+  },
+  "iata:BookingOption#waybillNumber":{
+    "@type": "iata:BookingOptionRequest#Waybill",
+    "iata:Waybill#waybillNumber": "AWB123"
+  },
+  "iata:bookingOption#carrier" : {
+    "@type": "iata:carrier",
+    "iata:carrier#airlineCode" : "LH"
+  },
+  "iata:bookingOption#carrierProductInfo" : {
+    "@type": "iata:carrierProductInfo",
+    "iata:carrierProductInfo#productCode" : "ZXF",
+    "iata:carrierProductInfo#productDescription": "General Cargo",
+    "iata:carrierProductInfo#speed": "td.Flash"
+  },
+  "iata:bookingOption#bookingTimes" : {
+  "@type": "iata:bookingTimes",
+  "iata:bookingTimes#lastestAcceptanceTime" : "2022-01-22T08:50",
+  "iata:bookingTimes#timeOfAvaibility": "2022-01-22T17:40"
+  },
+  "iata:BookingOption#BookingOptionRequest": {
+  "@type": "iata:BookingOptionRequest",
+  "@id": "iata:BookingOption/thisObjectId"
+  }
+}
