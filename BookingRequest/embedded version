@@ -1,0 +1,10 @@
+{
+    "@context": {
+      "iata": "https://onerecord.iata.org/"
+  },
+  "iata:BookingOptionRequest#BookingOption": {
+  "@type": "iata:BookingOption",
+  "@id": "iata:BookingOption/BookingOption/Id"
+  },
+  "iata:bookingOptionRequest#requestType": "Booking"
+}
